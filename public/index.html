@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="description" content="horner" />
+  <meta charset="utf-8">
+  <title>Horner</title>
+
+  <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+  <div id="container"></div>
+
+  <script id="template" type="text/ractive">
+    <table>
+      <tr>
+        <td>point / coefficients</td>
+        {{#coefficients}}
+          <td>
+            <input type="text" value={{.}}>
+          </td>
+        {{/coefficients}}
+        <td>
+          <button on-click="addCoeficient">+</button>
+          <button on-click="removeCoeficient">-</button>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <input type="text" value="{{point}}">
+        </td>
+        <td></td>
+        {{#intermid}}
+        <td>
+          <input type="text" value={{.}} disabled>
+        </td>
+        {{/intermid}}
+      </tr>
+
+      <tr>
+        <td></td>
+        {{#build}}
+        <td>
+          <input type="text" value={{.}} disabled>
+        </td>
+        {{/build}}
+      </tr>
+    </table>
+  </script>
+
+  <script src="vendor/ractive/ractive.min.js"></script>
+  <script src="src/app.js"></script>
+</body>
