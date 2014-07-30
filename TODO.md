@@ -1,0 +1,1 @@
+- binary can show NaN

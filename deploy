@@ -1,0 +1,10 @@
+#!/bin/bash
+
+./build
+
+cd dist
+git init
+git add --all
+git commit -m "deploying..."
+git remote add 5apps git@5apps.com:zigomir_astra.git
+git push 5apps master --force

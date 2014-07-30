@@ -20,9 +20,15 @@ var styleFiles = pickFiles(stylesCompiled, {
     destDir: 'css'
 });
 
-var vendorFiles = pickFiles('vendor', {
+var ractive = pickFiles('vendor', {
   srcDir: '/',
-  files: ['**/*.js'],
+  files: ['ractive/ractive.min.js'],
+  destDir: 'vendor'
+});
+
+var jquery = pickFiles('vendor', {
+  srcDir: '/',
+  files: ['jquery/dist/jquery.min.js'],
   destDir: 'vendor'
 });
 
@@ -30,4 +36,4 @@ if (env === 'production') {
   appFiles = uglifyJavaScript(appFiles);
 }
 
-module.exports = mergeTrees([appFiles, styleFiles, vendorFiles, 'public']);
+module.exports = mergeTrees([appFiles, styleFiles, ractive, jquery, 'public']);

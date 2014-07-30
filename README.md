@@ -21,8 +21,7 @@ open http://localhost:4200
 
 ### Build and deploy
 
+
 ```sh
-./build
-cd dist
-git add . && git commit -a "deploy" && git push 5apps master
+./deploy
 ```
