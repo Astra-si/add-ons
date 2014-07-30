@@ -14,6 +14,7 @@
     "tests"
   ],
   "dependencies": {
-    "ractive": "~0.5.5"
+    "ractive": "~0.5.5",
+    "jquery": "~2.1.1"
   }
 }

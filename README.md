@@ -1,5 +1,3 @@
-# Horner's method
-
 ### Setup
 
 Prerequisites
