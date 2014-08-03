@@ -11,17 +11,37 @@ isPrimeNumber = (number) ->
 #   console.log isPrimeNumber(i)
 
 findPrimeFactors = (number) ->
-  primeFactors = []
+  primeFactors    = []
+  intermidFactors = []
 
   i = 2
   while not isPrimeNumber(number)
     if number % i is 0
       number = number / i
       primeFactors.push i if isPrimeNumber(i)
+      # intermidFactors.push number unless isPrimeNumber(number)
     else
       i += 1
+
+  # console.log intermidFactors
 
   primeFactors.push number
   primeFactors
 
-console.log findPrimeFactors(48)
+# console.log findPrimeFactors(81)
+
+prime = 81
+ractive = new Ractive
+  el: 'container'
+  template: '#template'
+  data:
+    prime: prime
+    factors: []
+
+ractive.observe 'prime', (newValue, oldValue) ->
+  number = parseInt(newValue, 10)
+  unless isNaN(number)
+    factors = findPrimeFactors(number)
+    ractive.set('factors', factors)
+  else
+    ractive.set('factors', [])

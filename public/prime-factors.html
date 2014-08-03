@@ -4,17 +4,23 @@
     <meta name="description" content="prime factors" />
     <meta charset="utf-8">
     <title>prime factors</title>
-
-    <!-- <link rel="stylesheet" href="css/prime-factors.css"> -->
   </head>
 
   <body>
     <div id="container"></div>
 
-    <!-- <script id="template" type="text/ractive">
-    </script> -->
+    <script id="template" type="text/ractive">
+      <input type="text" value={{prime}}>
 
-    <!-- <script src="vendor/ractive/ractive.min.js"></script> -->
+      <h2>Factors</h2>
+      <ul>
+        {{#factors}}
+          <li><span>{{this}}</span></li>
+        {{/factors}}
+      </ul>
+    </script>
+
+    <script src="vendor/ractive/ractive.min.js"></script>
     <script src="src/prime-factors.js"></script>
   </body>
 </html>
