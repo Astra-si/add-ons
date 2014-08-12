@@ -26,9 +26,9 @@ var ractive = pickFiles('vendor', {
   destDir: 'vendor'
 });
 
-var jquery = pickFiles('vendor', {
+var react = pickFiles('vendor', {
   srcDir: '/',
-  files: ['jquery/dist/jquery.min.js'],
+  files: ['react/react.js', 'react/JSXTransformer.js'],
   destDir: 'vendor'
 });
 
@@ -36,4 +36,4 @@ if (env === 'production') {
   appFiles = uglifyJavaScript(appFiles);
 }
 
-module.exports = mergeTrees([appFiles, styleFiles, ractive, jquery, 'public']);
+module.exports = mergeTrees([appFiles, styleFiles, ractive, react, 'public']);
