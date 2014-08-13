@@ -8,6 +8,9 @@ var uglifyJavaScript = require('broccoli-uglify-js');
 var appCompiled = filterCoffeeScript('app');
 var stylesCompiled = less('app/styles');
 
+var filterReact = require('broccoli-react');
+var reactFiles = filterReact('app');
+
 var appFiles = pickFiles(appCompiled, {
     srcDir: '/',
     files: ['**/*.js'],
@@ -36,4 +39,4 @@ if (env === 'production') {
   appFiles = uglifyJavaScript(appFiles);
 }
 
-module.exports = mergeTrees([appFiles, styleFiles, ractive, react, 'public']);
+module.exports = mergeTrees([appFiles, styleFiles, ractive, reactFiles, react, 'public']);
