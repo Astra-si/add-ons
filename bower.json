@@ -1,5 +1,5 @@
 {
-  "name": "horner",
+  "name": "astra-add-ons",
   "version": "0.0.0",
   "authors": [
     "zigomir <zigomir@gmail.com>"
@@ -15,6 +15,6 @@
   ],
   "dependencies": {
     "ractive": "~0.5.5",
-    "jquery": "~2.1.1"
+    "react": "~0.11.1"
   }
 }
