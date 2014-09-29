@@ -1,7 +1,7 @@
 /** @jsx React.DOM */
 var Decimal = React.createClass({
   getInitialState: function() {
-    return { result: '' }
+    return { result: '' };
   },
   change: function(e) {
     var decimal = e.target.value;
@@ -24,7 +24,7 @@ var Decimal = React.createClass({
 
 var Binary = React.createClass({
   getInitialState: function(){
-    return { result: '' }
+    return { result: '' };
   },
   change: function(e) {
     var binary = e.target.value;
