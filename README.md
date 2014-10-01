@@ -1,4 +1,4 @@
-### Setup
+## Setup
 
 Prerequisites
 
@@ -12,14 +12,14 @@ bower install
 npm install
 ```
 
-### Running
+## Running
 
 ```sh
 broccoli serve
 open http://localhost:4200
 ```
 
-### Build and deploy
+## Build and deploy
 
 
 ```sh
